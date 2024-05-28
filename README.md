@@ -1,3 +1,5 @@
+# 1D Rocket Flight Simulator
+
 This repository contains a python based rocket flight simulation script that takes motor thrust and rocket drag data to figure out:
 
 - Rocket Height during flight
@@ -132,9 +134,9 @@ Motor thrust (T<sub>M</sub>) is provided by the user to the script as detailed i
 
 The changing rocket weight (W) is accounted for in the script by assuming the propellant burns off at a constant rate. To find the weight of the rocket for each time step, a comparison is made to find out if the propellant has fully burned off or not. This is through time from motor ignition ($T$) and total burn time ($B_T$). Using the initial rocket mass ($M_I$) which includes the burnable propellant mass and the mass of burnable propellant ($M_P$) provided by the user. The Weight of the rocket can be found for any time step.
 
-For $T<B_T$ Then $W_T = g(M_I - M_P(\frac {T}{B_T}))$
+For $T < B_{T}$ Then $W_{T} = g(M_I - M_P(\frac {T}{B_T}))$
 
-For $T \geq B_T $ Then $W_T = g(M_I - M_P)$
+For $T \geq B_{T}$ Then $W_T = g(M_I - M_P)$
 
 Where $g =9.81=$ Gravity and $W_T$ is the rocket weight at a specific time step.
 
@@ -168,9 +170,9 @@ $D_F = \frac {\rho U^2 A C_D}{2}$
 
 To find the total force on the rocket. A comparison is made to find out if the propellant has fully burned off or not. This is through time from motor ignition (T) and total burn time (B<sub>T</sub>). Then, using the forces of Rocket Weight (W), Drag Force (D<sub>f</sub>) motor thrust (T<sub>M</sub>) solved already for the specific time step, we can find the total force (F<sub>T</sub>).
 
-For $T<B_T$ Then $F_t = T_M - W - D_F$
+For $T < B_T$ Then $F_t = T_M - W - D_F$
 
-For $T \geq B_T $ Then $F_T = -1(W+D_F)$
+For $T \geq B_T$ Then $F_T = -1(W+D_F)$
 
 ## Rocket Velocity
 
